@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "ticketorderqueue",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "notificationHub",
+      "name": "notification",
+      "hubName": "TicketNotificationHub",
+      "connection": "gnabber_NOTIFICATIONHUB",
+      "enableTestSend": true,
+      "platform": "wns",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
