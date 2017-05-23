@@ -18,7 +18,7 @@ public class Ticket
 
 public static async Task<object> Run(HttpRequestMessage req, TraceWriter log, IAsyncCollector<Ticket> outputTable, IAsyncCollector<Ticket> outputQueueItem)
 {
-    log.Info($"Order Ticket WebHook was triggered!");
+    log.Info($"Order Ticket WebHook was triggered!")
 
     string jsonContent = await req.Content.ReadAsStringAsync();
     Ticket ticket = JsonConvert.DeserializeObject<Ticket>(jsonContent);
